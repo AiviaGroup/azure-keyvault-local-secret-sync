@@ -2,9 +2,11 @@
   "name": "@aiviagroup/keyvault-sync",
   "version": "0.0.0",
   "license": "Apache-2.0",
+  "packageManager": "pnpm@8.14.0",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "postinstall": "pnpm nx run-many -t generate && husky install",
+    "setup-ci": "./libs/workspace/src/scripts/setup-ci.sh",
     "format-check": "pnpm nx format:check --all --uncommitted",
     "format-write": "pnpm nx format:write --all",
     "az-login": "az account show || az login",

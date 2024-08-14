@@ -36,6 +36,7 @@ jobs:
           cache: 'pnpm'
           check-latest:
       - run: pnpm install --frozen-lockfile
+      - run: pnpm setup-ci
       - run: pnpm nx format:check --all # This command will be depricated by nx and replaced by a better option in the future
       - run: pnpm nx run-many -t lint --parallel=3
       - run: pnpm nx run-many -t build --parallel=3
