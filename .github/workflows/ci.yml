@@ -3,41 +3,40 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - "**"
   pull_request:
 
-permissions:
-  actions: read
-  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.number || github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  main:
+  ci:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: 'read'
+
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
-      - uses: pnpm/action-setup@v4
+          lfs: true
+      - uses: nrwl/nx-set-shas@v3
+      - name: Setup Git
+        run: |
+          git config --global user.name "GitHub Bot"
+          git config --global user.email "pipelines@aiviagroup.com"
+      - uses: pnpm/action-setup@v3
         with:
           version: 8
-
-      # This enables task distribution via Nx Cloud
-      # Run this command as early as possible, before dependencies are installed
-      # Learn more at https://nx.dev/ci/reference/nx-cloud-cli#npx-nxcloud-startcirun
-      # - run: pnpm dlx nx-cloud start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="e2e-ci"
-
-      # Cache node_modules
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: '20.x'
           cache: 'pnpm'
-
+          check-latest:
       - run: pnpm install --frozen-lockfile
-      - uses: nrwl/nx-set-shas@v4
-
-      # Prepend any command with "nx-cloud record --" to record its logs to Nx Cloud
-      # - run: pnpm exec nx-cloud record -- echo Hello World
-      # Nx Affected runs only tasks affected by the changes in this PR/commit. Learn more: https://nx.dev/ci/features/affected
-      - run: pnpm exec nx affected -t lint test build
-      - run: pnpm exec nx affected --parallel 1 -t e2e-ci
+      - run: pnpm nx format:check --all # This command will be depricated by nx and replaced by a better option in the future
+      - run: pnpm nx run-many -t lint --parallel=3
+      - run: pnpm nx run-many -t build --parallel=3
+      - run: pnpm nx run-many -t test --parallel=3
