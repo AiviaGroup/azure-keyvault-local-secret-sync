@@ -1,0 +1,136 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Code generated library files
+
+# Caches
+.nx
+.cache
+__pycache__
+.mypy_cache
+
+# Yarn files
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+yarn-error.log
+
+# compiled output
+dist/*
+**/dist
+/tmp
+/out-tsc
+/logs
+/libs/charts/**/src/charts
+
+# dependencies
+node_modules/
+
+# Reports
+/coverage
+/reports
+
+# leave prisma migration history files
+!/**/migrations/**
+
+# env files and secrets
+*.env
+*.env.*
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# keep .env templates
+!/**/.env.template
+!.env.template
+
+# Add k8s secrets and sensitive files
+secrets/
+
+# Next.js
+.next
+
+# misc
+/.sass-cache
+/connect.lock
+/libpeerconnection.log
+npm-debug.log
+package-lock.json
+testem.log
+/typings
+*thunderActivity.json
+
+# Python related files
+__pycache__/
+/**/.pytest_cache
+*.py[cod]
+*$py.class
+/**/.coverage
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+.VSCodeCounter
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+*.db
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

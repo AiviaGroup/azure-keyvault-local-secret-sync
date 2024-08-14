@@ -1,0 +1,6 @@
+{
+  "plugins": [],
+  "importOrderParserPlugins": ["typescript", "jsx", "decorators-legacy"],
+  "tailwindFunctions": ["clsx", "cva", "cn"],
+  "singleQuote": true
+}

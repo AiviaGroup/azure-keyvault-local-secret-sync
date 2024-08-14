@@ -1,0 +1,19 @@
+{
+  "name": "pipes-templates",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/pipes/templates/src",
+  "projectType": "library",
+  "targets": {
+    "version": {
+      "options": {},
+      "configurations": {
+        "canary": {}
+      }
+    },
+    "github-release": {
+      "executor": "@jscutlery/semver:github",
+      "options": {}
+    }
+  },
+  "tags": []
+}

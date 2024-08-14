@@ -1,0 +1,157 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "terminal.integrated.allowChords": true,
+  "files.associations": {
+    "**/libs/pipes/**/*.yml": "azure-pipelines",
+    "**/libs/pipes/**/*.yaml": "azure-pipelines",
+    "**.env": "env",
+    "**.env.dev": "env",
+    "**.env.test": "env",
+    "**.env.prod": "env",
+    "**.env.template": "env",
+    "**.env.*": "env"
+  },
+  "[bicep]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-bicep"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    ["classNames\\(([^)]*)\\)", "'([^']*)'"],
+    ["classNames\\(([^)]*)\\)", "\"([^\"]*)\""],
+    "className\\: '([^']*)'",
+    "className\\: '([^']*)'"
+  ],
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "git-graph.dialog.fetchRemote.pruneTags": true,
+  "git.pullTags": false,
+  "git-graph.repository.fetchAndPruneTags": true,
+  "git-graph.dialog.fetchIntoLocalBranch.forceFetch": true,
+  "git-graph.repository.commits.fetchAvatars": true,
+  "git.followTagsWhenSync": true,
+  "[helm]": {
+    "editor.formatOnSave": false
+  },
+  "nxConsole.commonNxCommands": [
+    "run-many",
+    "affected",
+    "affected:graph",
+    "list",
+    "migrate",
+    "add-dependency",
+    "add-dev-dependency",
+    "reset"
+  ],
+  "svg.preview.autoShow": true,
+  "cSpell.language": "en-GB",
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml",
+    "editor.autoClosingBrackets": "never",
+    "files.trimFinalNewlines": true
+  },
+  "xml.format.preserveAttributeLineBreaks": true,
+  "xml.format.splitAttributes": true,
+  "eslint.validate": [
+    "json"
+  ],
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "material-icon-theme.activeIconPack": "nest",
+  "material-icon-theme.languages.associations": {
+    "env": "tune"
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnPaste": true,
+  "editor.tabCompletion": "on",
+  "files.autoSave": "afterDelay",
+  "files.trimTrailingWhitespace": true,
+  "prettier.printWidth": 120,
+  "git.confirmSync": false,
+  "json.schemas": [],
+  "redhat.telemetry.enabled": false,
+  "editor.bracketPairColorization.enabled": true,
+  "vscode-edge-devtools.mirrorEdits": true,
+  "editor.inlineSuggest.enabled": true,
+  "git.enableSmartCommit": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": false,
+    "markdown": false
+  },
+  "workbench.startupEditor": "none",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "vscode-edge-devtools.headless": false,
+  "vscode-edge-devtools.showWorkers": true,
+  "vscode-edge-devtools.useHttps": true,
+  "terminal.integrated.drawBoldTextInBrightColors": false,
+  "[markdown]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.tabSize": 4
+  },
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "keep",
+    "gitlens.codeLens.scopes": ["document"],
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    }
+  },
+  "markdown.extension.tableFormatter.normalizeIndentation": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "yaml.schemas": {},
+  "svg.preview.mode": "svg",
+  "[python]": {
+    "editor.formatOnType": true,
+    "editor.detectIndentation" : false,
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-python.black-formatter",
+
+  },
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
+  },
+  "git.autofetch": true,
+  "workbench.colorTheme": "Default Dark Modern",
+  "githubPullRequests.pushBranch": "always",
+  "files.eol": "\n",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "playwright.reuseBrowser": true,
+  "playwright.showTrace": false,
+  "window.zoomLevel": 1,
+  "helm-intellisense.customValueFileNames": [
+    "values/prod-values.yaml",
+    "values/test-values.yaml",
+    "values/dev-values.yaml",
+    "values/local-values.yaml",
+    "values.yaml"
+  ],
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": true,
+  "editor.tabSize": 4,
+  "[properties]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
+}

@@ -1,0 +1,47 @@
+# Add files here to ignore them from prettier formatting
+
+# compiled output
+/dist
+/**/dist
+/build
+
+#remix build folders
+/apps/**/build
+
+# Next build files
+*.next
+
+# Caches
+.nx
+.cache
+__pycache__
+
+# Python related files
+.venv
+__pycache__/
+/**/.pytest_cache
+.mypy_cache
+
+# Reports
+/coverage
+/reports
+/test
+
+# dependencies
+/node_modules
+node_modules
+/package.json
+/package-lock.json
+pnpm-lock.yaml
+
+# IDEs and editors
+.github
+/.vscode
+/.idea
+/.github
+/.yarn
+
+# Helm charts are linted using `helm lint`. Prettier and nx format do not support helm chart as they produce yaml but aren't strictly yaml
+libs/charts/**/*yaml
+
+# Codegen folders
