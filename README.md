@@ -7,3 +7,19 @@ Welcome to Aivia Group's [Azure Keyvault Local Secret Sync](https://github.com/A
 # Getting Started
 
 ## Setup Local workspace and install dependancies
+
+```
+pnpm install
+```
+
+## View the monorepo structure
+
+```
+pnpm nx graph
+```
+
+## Sync Local Repo and Project Secrets
+
+```
+pnpm nx run-many -t gen-env-files
+```

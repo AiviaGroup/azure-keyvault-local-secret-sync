@@ -10,7 +10,7 @@
     "format-check": "pnpm nx format:check --all --uncommitted",
     "format-write": "pnpm nx format:write --all",
     "az-login": "az account show || az login",
-    "gen-env-files": "./tools/scripts/populate-kv-secret-env-files.sh -k aiviagroup-keyvault-sync-repo-local",
+    "gen-env-files": "./libs/workspace/src/scripts/populate-kv-secret-env-files.sh -k kv-sync-repo-local",
     "smoke-test": "pnpm nx format:check --all && pnpm nx run-many -t lint && pnpm nx run-many -t build && pnpm nx run-many -t test"
   },
   "husky": {

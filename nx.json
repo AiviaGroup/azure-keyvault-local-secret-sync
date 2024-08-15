@@ -11,6 +11,7 @@
     ],
     "sharedGlobals": ["{workspaceRoot}/.github/workflows/ci.yml"]
   },
+  "nxCloudAccessToken": "ZDE1MGMxMzItNWMzYy00MDE3LWEwZWItMmJkOTY2ZTQ1OGYxfHJlYWQ=",
   "plugins": [
     {
       "plugin": "@nx/remix/plugin",
