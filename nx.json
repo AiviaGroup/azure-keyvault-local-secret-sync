@@ -31,26 +31,12 @@
         "serveStaticTargetName": "serve-static"
       }
     },
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "lint"
-      }
-    },
-    {
-      "plugin": "@nx/playwright/plugin",
-      "options": {
-        "targetName": "e2e"
-      }
-    }
+    { "plugin": "@nx/eslint/plugin", "options": { "targetName": "lint" } },
+    { "plugin": "@nx/playwright/plugin", "options": { "targetName": "e2e" } }
   ],
   "targetDefaults": {
-    "setup": {
-      "dependsOn": ["^setup"]
-    },
-    "generate": {
-      "dependsOn": ["^generate"]
-    },
+    "setup": { "dependsOn": ["^setup"] },
+    "generate": { "dependsOn": ["^generate"] },
     "version": {
       "dependsOn": ["^version"],
       "executor": "@jscutlery/semver:version",
@@ -76,5 +62,6 @@
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
     }
-  }
+  },
+  "nxCloudAccessToken": "YzE5MzI0ZGEtYjI5YS00YTg4LTg4MTUtODE1NTVlZjIzMzYzfHJlYWQtd3JpdGU="
 }
