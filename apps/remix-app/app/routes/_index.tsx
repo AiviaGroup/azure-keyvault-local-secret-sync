@@ -21,7 +21,7 @@ export default function Index() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await fetch('http://localhost:3000/');
+        const response = await fetch('http://localhost:3333/');
         const result = await response.text();
         setApiData(result);
       } catch (error) {

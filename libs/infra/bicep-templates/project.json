@@ -1,0 +1,19 @@
+{
+  "name": "infra-bicep-templates",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/infra/bicep-templates/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/infra/bicep-templates",
+        "main": "libs/infra/bicep-templates/src/index.ts",
+        "tsConfig": "libs/infra/bicep-templates/tsconfig.lib.json",
+        "assets": ["libs/infra/bicep-templates/*.md"]
+      }
+    }
+  }
+}

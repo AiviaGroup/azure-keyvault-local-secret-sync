@@ -17,7 +17,19 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
-    "paths": {}
+    "paths": {
+      "@aiviagroup/charts-templates": ["libs/charts/templates/src/index.ts"],
+      "@aiviagroup/infra-bicep-templates": [
+        "libs/infra/bicep-templates/src/index.ts"
+      ],
+      "@aiviagroup/libs/ui/react": ["libs/ui/react/src/index.ts"],
+      "@aiviagroup/libs/ui/react/server": ["libs/ui/react/src/server.ts"],
+      "@aiviagroup/pipes-templates": ["libs/pipes/templates/src/index.ts"],
+      "@aiviagroup/terraform-templates": [
+        "libs/infra/terraform-templates/src/index.ts"
+      ],
+      "@aiviagroup/ui-assets": ["libs/ui/assets/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

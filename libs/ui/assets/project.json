@@ -1,0 +1,19 @@
+{
+  "name": "ui-assets",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ui/assets/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ui/assets",
+        "main": "libs/ui/assets/src/index.ts",
+        "tsConfig": "libs/ui/assets/tsconfig.lib.json",
+        "assets": ["libs/ui/assets/*.md"]
+      }
+    }
+  }
+}

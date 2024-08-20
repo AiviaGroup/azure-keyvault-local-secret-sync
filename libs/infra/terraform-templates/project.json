@@ -1,0 +1,19 @@
+{
+  "name": "terraform-templates",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/infra/terraform-templates/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/infra/terraform-templates",
+        "main": "libs/infra/terraform-templates/src/index.ts",
+        "tsConfig": "libs/infra/terraform-templates/tsconfig.lib.json",
+        "assets": ["libs/infra/terraform-templates/*.md"]
+      }
+    }
+  }
+}

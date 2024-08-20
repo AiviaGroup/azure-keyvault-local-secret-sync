@@ -1,9 +1,0 @@
-variables:
-  - name: var_gituseremail
-    value: 'pipelines@aiviagroup.com'
-
-  - name: var_gitusername
-    value: 'Devops Pipeline'
-
-  - name: var_commit_message
-    value: $(Build.SourceVersionMessage)
